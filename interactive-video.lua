@@ -293,7 +293,8 @@ local input_choice_mapping = {
   ["LEFT"]  = { "iv-input-left",  cmd_input_prev, { repeatable = true } },
   ["ENTER"] = { "iv-input-enter", cmd_input_submit },
 }
-for _, key in ipairs({ "UP", "DOWN", "PGUP", "PGDWN" }) do
+--for _, key in ipairs({ "UP", "DOWN", "PGUP", "PGDWN" }) do
+for _, key in ipairs({ "UP", "DOWN" }) do
   input_choice_mapping[key] = { "iv-nop-"..key, cmd_nop }
 end
 mapping_merge(input_choice_mapping, nav_mapping)
